@@ -37,3 +37,19 @@ graph LR
   LS[LidarSimulator] --> D[/distance/]
   OM[ObstacleMonitor] --> D
   OM --> A[/alert/]
+```
+```mermaid
+graph LR
+  subgraph Nodes
+    LS[LidarSimulator]
+    OM[ObstacleMonitor]
+  end
+
+  subgraph Topics
+    D[/distance/]
+    A[/alert/]
+  end
+
+  LS -- publishes --> D
+  OM -- subscribes --> D
+  OM -- publishes --> A
