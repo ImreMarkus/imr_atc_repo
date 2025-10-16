@@ -29,5 +29,17 @@ source ~/ros2_ws/install/setup.bash
 </details>
 
 ``` r
-ros2 launch kisbeadando_feladat launch_example1.launch.py
+ros2 launch kisbeadando_feladat obstacle_detector_launch.py
 ```
+
+```mermaid
+graph LR
+    subgraph Nodes
+        LS[LidarSimulator]\n(publishes distance) --> DT[distance topic (std_msgs/Float32)]
+        OM[ObstacleMonitor]\n(subscribes distance, publishes alert) --> AL[alert topic (std_msgs/String)]
+    end
+
+
+LS --> DT
+OM --> DT
+OM --> AL
