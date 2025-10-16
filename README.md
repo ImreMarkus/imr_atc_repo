@@ -32,6 +32,10 @@ source ~/ros2_ws/install/setup.bash
 ros2 launch kisbeadando_feladat obstacle_detector_launch.py
 ```
 
+``` r
+A package két node-ból áll.A lidar_simulator egy LiDAR-t szimulál, véletlenszerű távolságokat generál, amiket a distance topicban hirdet (std_msgs/msg/Float32). Az obstacle_monitor egy akadályfigyelő node, ami feliratkozik a distance topicra (std_msgs/msg/Float32). Ha a távolság kisebb, mint 0.5m, akkor kiad egy alert topicot (std_msgs/msg/String) és a node konzolon figyelmezteti a felhasználót. Megvalósítás ROS2-vel.
+```
+
 ```mermaid
 graph LR
   subgraph Nodes
