@@ -1,10 +1,3 @@
-"""
-Akadályfigyelő node.
-- Feliratkozik: `distance` (std_msgs/msg/Float32)
-- Küszöb: 0.5 m (konfigurálható paraméter)
-- Ha a távolság kisebb, kiad egy `alert` topic-ot (std_msgs/msg/String)
-- A node konzolon figyelmezteti a felhasználót
-"""
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32, String
@@ -22,7 +15,6 @@ class ObstacleMonitor(Node):
 
     def distance_callback(self, msg: Float32):
         dist = float(msg.data)
-# rövid logolás
         self.get_logger().debug(f'Received distance: {dist:.2f}')
         if dist < self.threshold:
             alert = String()

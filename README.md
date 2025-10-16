@@ -34,12 +34,6 @@ ros2 launch kisbeadando_feladat obstacle_detector_launch.py
 
 ```mermaid
 graph LR
-  LS[LidarSimulator] --> D[/distance/]
-  OM[ObstacleMonitor] --> D
-  OM --> A[/alert/]
-```
-```mermaid
-graph LR
   subgraph Nodes
     LS[LidarSimulator]
     OM[ObstacleMonitor]
