@@ -7,7 +7,7 @@ def generate_launch_description():
 
 
     lidar_node = Node(
-        package='my_obstacle_detector',
+        package='kisbeadando_feladat',
         executable='lidar_simulator',
         name='lidar_simulator',
         output='screen',
@@ -16,7 +16,7 @@ def generate_launch_description():
 
 
     monitor_node = Node(
-        package='my_obstacle_detector',
+        package='kisbeadando_feladat',
         executable='obstacle_monitor',
         name='obstacle_monitor',
         output='screen',

@@ -9,7 +9,7 @@ It is assumed that the workspace is `~/ros2_ws/`.
 cd ~/ros2_ws/src
 ```
 ``` r
-git clone https://github.com/sze-info/kisbeadando_feladat
+git clone https://github.com/ImreMarkus/imr_atc_repo
 ```
 
 ### Build ROS 2 packages

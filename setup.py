@@ -23,8 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
             'console_scripts': [
-                    'lidar_simulator = my_obstacle_detector.lidar_simulator:main',
-                    'obstacle_monitor = my_obstacle_detector.obstacle_monitor:main',
+                    'lidar_simulator = kisbeadando_feladat.lidar_simulator:main',
+                    'obstacle_monitor = kisbeadando_feladat.obstacle_monitor:main',
         ],
     },
 )
